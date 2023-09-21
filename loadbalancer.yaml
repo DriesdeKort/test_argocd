@@ -11,6 +11,7 @@ metadata:
     service.beta.kubernetes.io/aws-load-balancer-ssl-ports: https
     # By default In-tree controller will create a Classic LoadBalancer if you require a NLB uncomment below annotation.
     # service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+    namespace: apache
 spec:
   selector:
     app: apache
