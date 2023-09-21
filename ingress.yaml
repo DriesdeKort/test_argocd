@@ -17,3 +17,10 @@ spec:
                 name: apache-service
                 port:
                   number: 80
+          - path: /tetris
+            pathType: Prefix
+            backend:
+              service:
+                name: tetris-service
+                port:
+                  number: 80  # Assuming the Tetris game listens on port 80
