@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: apache
-        image: 167698347898.dkr.ecr.eu-west-1.amazonaws.com/apache-bitbucket-container:latest
+        image: 167698347898.dkr.ecr.eu-west-1.amazonaws.com/apache-bitbucket-container:67
         imagePullPolicy: Always
         ports:
         - containerPort: 80
