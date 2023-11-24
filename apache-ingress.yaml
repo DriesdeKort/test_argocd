@@ -11,7 +11,7 @@ metadata:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
 spec:
   rules:
-    - host: apache.argocd.dries-argocd-init.internship-2023.axxes.cloud
+    - host: apache.dries-argocd-init.internship-2023.axxes.cloud
       http:
         paths:
           - path: /
