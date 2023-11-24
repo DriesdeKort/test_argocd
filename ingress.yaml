@@ -1,6 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  namespace: tetris
   name: shared-ingress
   annotations:
     kubernetes.io/ingress.class: "alb"
@@ -10,19 +11,14 @@ metadata:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
 spec:
   rules:
-    - http:
-        paths:
+    - host: 
+      http:
+        paths: tetris.argocd.dries-argocd-init.internship-2023.axxes.cloud
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: apache-service
+                name: tetris
                 port:
                   number: 80
-          - path: /tetris
-            pathType: Prefix
-            backend:
-              service:
-                name: tetris-service
-                port:
-                  number: 80  # Assuming the Tetris game listens on port 80
+       
