@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: tetris-container
-          image: bsord/tetris:latest
+          image: boomstack/tetris:latest
           ports:
             - containerPort: 80
 
