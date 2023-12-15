@@ -4,12 +4,12 @@ metadata:
   namespace: apache
   name: apache-ingress
   annotations:
-    kubernetes.io/ingress.class: "alb"
     alb.ingress.kubernetes.io/backend-protocol: HTTP
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/group.name: eks-reuse-alb
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
 spec:
+  ingressClassName: "alb"
   rules:
     - host: apache.dries-no-argo.internship-2023.axxes.cloud
       http:
